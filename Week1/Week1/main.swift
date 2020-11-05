@@ -307,3 +307,4 @@ func clap369 (lines : Int) -> Array<String>{
     return intArray
 }
 print(clap369(lines: 15))
+
