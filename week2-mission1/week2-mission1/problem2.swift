@@ -7,3 +7,10 @@
 
 import Foundation
 
+
+func IDValidator(password : String) -> Bool {
+    let passwordreg = ("(?=.*[A-Za-z])(?=.*[0-9]).{5,24}")
+    let passwordtesting = NSPredicate(format: "SELF MATCHES %@", passwordreg)
+    return passwordtesting.evaluate(with: password)
+}
+
