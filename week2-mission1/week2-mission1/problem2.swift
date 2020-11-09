@@ -9,8 +9,8 @@ import Foundation
 
 
 func IDValidator(id : String) -> Bool {
-    let passwordreg = ("(?=.*[A-Za-z])(?=.*[0-9]).{5,24}")
-    let passwordtesting = NSPredicate(format: "SELF MATCHES %@", passwordreg)
-    return passwordtesting.evaluate(with: id)
+    let idreg = ("(?=.*[A-Za-z])(?=.*[0-9]).{5,24}")
+    let idtesting = NSPredicate(format: "SELF MATCHES %@", idreg)
+    return idtesting.evaluate(with: id)
 }
 

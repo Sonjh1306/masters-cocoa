@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+func passwordValidator(password : String) -> Int {
+    
+}
