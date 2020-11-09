@@ -15,6 +15,6 @@ import Foundation
 //var myArray = ArrayPractice2()
 //myArray.printArray(array : myArray.setBoolArray(), newChar: "$")
 
-print(IDValidator(password: "awdascaw123123"))
+print(IDValidator(id: "awdascaw123123"))
 
 
