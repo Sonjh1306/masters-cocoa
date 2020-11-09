@@ -26,22 +26,3 @@ struct ArrayPractice {
         return array
     }
 }
-
-
-
-
-
-
-
-
-
-//
-//func makeArray() -> [[Int]]{
-//    var arr : [[Int]] = []
-//    arr.append([1])
-//    arr.append([6,7])
-//    arr.append([11,12,13])
-//    arr.append([16,17,18,19])
-//    arr.append([21,22,23,24,25])
-//    return arr
-//}
