@@ -50,7 +50,7 @@ struct PlayBaseball {
     mutating func showGameScore() -> Bool {
 
         var answer : Bool = false
-        for _ in 0...9 {
+        for _ in 0...8 {
             print("입력하세요")
             let newNum = Int(readLine()!)!
             hit(num: newNum)
