@@ -8,7 +8,7 @@
 import Foundation
 
 struct ArrayPractice2 {
-    func printArray(array : [[Bool]],newChar : Character){
+    func printArray2(array : [[Bool]],newChar : Character){
         for i in 0...6 {
             print(array[i].map{$0 == false  ? " ":"\(newChar)" })
         }

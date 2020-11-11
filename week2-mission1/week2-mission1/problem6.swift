@@ -7,6 +7,6 @@
 
 import Foundation
 
-//func duplicatedWords(inputWords : [String]) -> [String]{
-//
+//func duplicatedWords(inputWords: [String]) -> [String] {
+//    
 //}
