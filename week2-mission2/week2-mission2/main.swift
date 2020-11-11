@@ -35,6 +35,6 @@ print("======================")
 testInterest(unitDay: 10)
 
 
-////연습문제 2
-//var game = PlayBaseball()
-//game.newGame()
+//연습문제 2
+var game = PlayBaseball()
+print(game.showGameScore())
