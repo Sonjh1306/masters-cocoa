@@ -4,7 +4,7 @@
 //
 //  Created by sonjuhyeong on 2020/11/11.
 //
-//원금*연이율*(예치기간/1년)
+
 import Foundation
 
 struct RateOfInterest {
