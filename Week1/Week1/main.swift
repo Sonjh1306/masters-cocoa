@@ -30,6 +30,38 @@ func convertToInches(fromMeter : Float) -> Float{
 print("\(convertToInches(fromMeter: 1.5))inch")
 print("\(convertToInches(fromMeter: 0.4))inch")
 
+// 추가문제
+func converter(inputNum:Double,inputUnit:String,convertUnit:String?){
+    var result : Double = 0
+    var resultUnit : String = ""
+    
+    if inputUnit == "inch" && convertUnit == "cm" {
+        result = inputNum * 2.54
+        resultUnit = convertUnit ?? ""
+    }else if inputUnit == "inch" && convertUnit == "cm" {
+        result = inputNum * 0.39
+        resultUnit = convertUnit ?? ""
+    }else if inputUnit == "m" && convertUnit == "inch"{
+        result = inputNum * 39
+        resultUnit = convertUnit ?? ""
+    }else if inputUnit == "inch" && convertUnit == "m"{
+        result = inputNum * 0.0254
+        resultUnit = convertUnit ?? ""
+    }else if inputUnit == "cm"{
+        result = inputNum * 0.01
+        resultUnit = "m"
+    }else if inputUnit == "m"{
+        result = inputNum * 100
+        resultUnit = "cm"
+    }else if inputUnit == "inch"{
+        result = inputNum * 2.54
+        resultUnit = "cm"
+    }
+    print("\(result)\(resultUnit)")
+}
+
+
+// 2020.11.03(화)
 //point를 넘기면 학점 “A”, “B”, “C”, “D”, “F”을 리턴하세요
 func whatIsGrade(point : Int) -> Character{
     if (point >= 90) {
