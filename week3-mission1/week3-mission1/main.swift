@@ -7,15 +7,16 @@
 
 import Foundation
 
-// 문제1 : MatrixCalculation
-var matrix : Matrix = Matrix()
-matrix.initMatrix(a: 1.2, b: 2.3, c: 3.4, d: 4.5)
-let otherMatrix : Matrix = Matrix(a: 1.2, b: 2.3, c: 3.4, d: 4.5)
+//// 문제1 : MatrixCalculation
+//var matrix : Matrix = Matrix()
+//matrix.initMatrix(a: 2.3, b: 3.4, c: 4.5, d: 5.6)
+//let otherMatrix : Matrix = Matrix(a: 1.2, b: 2.3, c: 3.4, d: 4.5)
+//
+//_ = matrix.sum(with: otherMatrix)
+//_ = matrix.product(with: otherMatrix)
 
-dump(matrix.sum(with: otherMatrix))
-dump(matrix.product(with: otherMatrix))
+// 문제2 : SpecialBinaryNumber
 
-matrix.initMatrix(a: 2.3, b: 3.4, c: 4.5, d: 5.6)
-dump(matrix.sum(with: otherMatrix))
+var binaryNumber = BinaryNumber(with: 4)
 
 

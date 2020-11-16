@@ -29,10 +29,12 @@ class Matrix {
     }
     func sum(with other: Matrix) -> Matrix {
         let sumMatrix : Matrix = Matrix(a: self.a + other.a, b: self.b + other.b , c: self.c + other.c , d: self.d + other.d )
+        print("sum : \(sumMatrix.a) , \(sumMatrix.b) , \(sumMatrix.c) , \(sumMatrix.d) ")
         return sumMatrix
     }
     func product(with other: Matrix) -> Matrix {
         let productMatrix : Matrix = Matrix(a: (self.a * other.a) + (self.b * other.c), b: (self.a * other.b) + (self.b * other.d), c: (self.c * other.a) + (self.d * other.c), d: (self.c * other.b) + (self.d * other.d))
+        print("sum : \(productMatrix.a) , \(productMatrix.b) , \(productMatrix.c) , \(productMatrix.d) ")
         return productMatrix
     }
 }
