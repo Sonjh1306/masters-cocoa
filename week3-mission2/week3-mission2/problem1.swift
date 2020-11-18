@@ -35,7 +35,7 @@ struct BracketTest{
     
     // 하나씩 입력받은 괄호들을 섞어서 String을 합쳐보자.
     mutating func generate(with count:Int) -> [String] {
-        var arr : [String] = []
+        
         bracketArr.append(contentsOf: Array(repeating: openBracket, count: count))
         bracketArr.append(contentsOf: Array(repeating: closeBracket, count: count))
         
