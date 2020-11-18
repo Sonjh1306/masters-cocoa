@@ -12,8 +12,8 @@ struct BracketTest{
     var closeBracket : String = ""
     var bracketArr : [String] = []
     var bracketString : String = ""
-    var resultBracketArr : [String] = []
-    var count : Int = 0
+    var resultBracketArr : Set<String> = []
+    var sumBracketArr : [String] = []
     
     enum Bracket {
         case round
@@ -40,19 +40,22 @@ struct BracketTest{
         bracketArr.append(contentsOf: Array(repeating: closeBracket, count: count))
         
         // bracketArr 을 섞어서 다시 합치고 resultBracketArr 에 넣는다.
-        for _ in 1...(count * 10) {
+        for _ in 1...(count * 20) {
             bracketArr = bracketArr.shuffled()
             bracketString = bracketArr.joined(separator: "")
-            resultBracketArr.append(bracketString)
+            resultBracketArr.insert(bracketString)
+        }
+        print(resultBracketArr)
+        
+        // 2개만 가능한 임시ㅠㅠ..
+        for index in resultBracketArr {
+            if index == "()()" || index == "(())" {
+                sumBracketArr.append(index)
+            }
         }
         
-        //
-//        for index in resultBracketArr {
-//
-//        }
-//
-        print(resultBracketArr)
-        return resultBracketArr
+        print(sumBracketArr)
+        return sumBracketArr
     }
     
     // 열린 괄호 +1 , 닫힌 괄호 -1 , 합계 0 면 올바른 괄호
