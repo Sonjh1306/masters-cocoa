@@ -8,7 +8,12 @@
 import Foundation
 
 
-var parentheses = Parentheses.init(with: .round)
-_ = parentheses.generate(with: 2)
+var bracketTest = BracketTest.init(with: .round)
+_ = bracketTest.generate(with: 2)
 
-print(parentheses.analyze(with: "((()))"))
+print(bracketTest.analyze(with: "(())()"))
+
+
+////0.001 값을 1,000번 더하면 1이 되어야 한다.
+//print(sum(value: 0.001, repeat: 1000))
+////하지만 실행 결과는 1.0000000000000007

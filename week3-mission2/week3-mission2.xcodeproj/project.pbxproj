@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD4228142564A979006E3182 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4228132564A979006E3182 /* main.swift */; };
 		BD42281C2564B398006E3182 /* problem1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42281B2564B398006E3182 /* problem1.swift */; };
-		BD42281F2564B85B006E3182 /* problem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42281E2564B85B006E3182 /* problem2.swift */; };
+		BD42281F2564B85B006E3182 /* practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42281E2564B85B006E3182 /* practice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +28,7 @@
 		BD4228102564A979006E3182 /* week3-mission2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "week3-mission2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4228132564A979006E3182 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BD42281B2564B398006E3182 /* problem1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = problem1.swift; sourceTree = "<group>"; };
-		BD42281E2564B85B006E3182 /* problem2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = problem2.swift; sourceTree = "<group>"; };
+		BD42281E2564B85B006E3182 /* practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			children = (
 				BD4228132564A979006E3182 /* main.swift */,
 				BD42281B2564B398006E3182 /* problem1.swift */,
-				BD42281E2564B85B006E3182 /* problem2.swift */,
+				BD42281E2564B85B006E3182 /* practice.swift */,
 			);
 			path = "week3-mission2";
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			files = (
 				BD4228142564A979006E3182 /* main.swift in Sources */,
 				BD42281C2564B398006E3182 /* problem1.swift in Sources */,
-				BD42281F2564B85B006E3182 /* problem2.swift in Sources */,
+				BD42281F2564B85B006E3182 /* practice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

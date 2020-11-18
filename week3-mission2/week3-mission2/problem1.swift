@@ -7,16 +7,13 @@
 
 import Foundation
 
-struct Parentheses{
+struct BracketTest{
     var openBracket : String = ""
     var closeBracket : String = ""
     var bracketArr : [String] = []
-
     var bracketString : String = ""
-    var sumBracketArr : [String] = []
-   
-    var analyzeArr : [String] = []
-
+    var resultBracketArr : [String] = []
+    var count : Int = 0
     
     enum Bracket {
         case round
@@ -35,42 +32,43 @@ struct Parentheses{
             self.closeBracket = "}"
         }
     }
-    // values.filter { $0.split(separator: "0").joined() == String(repeating: "1", count: bitcount) }
+    
     // 하나씩 입력받은 괄호들을 섞어서 String을 합쳐보자.
-    mutating func generate(with count:Int) -> Array<String> {
-        bracketArr.append(String(repeating: String(repeating: openBracket, count: 1), count: count))
-        bracketArr.append(String(repeating: String(repeating: closeBracket, count: 1), count: count))
-//        bracketString = bracketArr.joined(separator: "")
-//        sumBracketArr.append(bracketString)
-        print(bracketArr)
-        for _ in 1...count {
-            bracketArr.append(openBracket)
-            bracketArr.append(closeBracket)
+    mutating func generate(with count:Int) -> [String] {
+        var arr : [String] = []
+        bracketArr.append(contentsOf: Array(repeating: openBracket, count: count))
+        bracketArr.append(contentsOf: Array(repeating: closeBracket, count: count))
+        
+        // bracketArr 을 섞어서 다시 합치고 resultBracketArr 에 넣는다.
+        for _ in 1...(count * 10) {
             bracketArr = bracketArr.shuffled()
-        }
-        if bracketArr.count == (count * 2) {
             bracketString = bracketArr.joined(separator: "")
+            resultBracketArr.append(bracketString)
         }
-        for _ in 1...count {
-            sumBracketArr.append(bracketString)
-        }
-        print(sumBracketArr)
-        return sumBracketArr
+        
+        //
+//        for index in resultBracketArr {
+//
+//        }
+//
+        print(resultBracketArr)
+        return resultBracketArr
     }
     
     // 열린 괄호 +1 , 닫힌 괄호 -1 , 합계 0 면 올바른 괄호
-    func analyze(with value: String ) -> Bool {
-        let analyzeArr = Array(value)
+    mutating func analyze(with value: String ) -> Bool {
+        let analyzeArr = value.map { String($0) }
         var count = 0
         
-        if analyzeArr[analyzeArr.count - 1] == "(" {
+        // 처음이 닫혀 있거나 끝이 열려 있으면 false
+        if analyzeArr[analyzeArr.count - 1] == openBracket || analyzeArr[0] == closeBracket {
             return false
         }
         for i in analyzeArr {
-            if i == "("{
+            if (i == openBracket) {
                 count += 1
             }
-            else if i == ")"{
+            else if (i == closeBracket){
                 if count <= 0 {
                     return false
                 } else {
@@ -78,6 +76,7 @@ struct Parentheses{
                 }
             }
         }
+
         if count == 0 {
             return true
         } else {
@@ -88,19 +87,3 @@ struct Parentheses{
 
 
 
-
-
-//for _ in 1...30 {
-//    bracketArr.append(firstBracket)
-//    bracketArr.append(firstBracket)
-//    bracketArr = bracketArr.shuffled()
-//    if bracketArr.count == (count * 2) {
-//        bracketString = bracketArr.joined(separator: "")
-//    }
-//    sumBracketArr.append(bracketString)
-//}
-//for _ in 1...count {
-//    sumBracketArr.append(bracketString)
-//}
-//print(sumBracketArr)
-//return bracketArr
