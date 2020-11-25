@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD04EC2F256DFDEF00B42BDB /* CSVFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD04EC2E256DFDEF00B42BDB /* CSVFile.swift */; };
+		BD04EC32256E03B200B42BDB /* MakeMultiThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD04EC31256E03B200B42BDB /* MakeMultiThread.swift */; };
 		BDB8F1A3256CF76300AB2E2F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB8F1A2256CF76300AB2E2F /* main.swift */; };
 		BDB8F1AB256CF7A500AB2E2F /* SearchFileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB8F1AA256CF7A500AB2E2F /* SearchFileSystem.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD04EC2E256DFDEF00B42BDB /* CSVFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVFile.swift; sourceTree = "<group>"; };
+		BD04EC31256E03B200B42BDB /* MakeMultiThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMultiThread.swift; sourceTree = "<group>"; };
 		BDB8F19F256CF76300AB2E2F /* Week4-Mission(Wed) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week4-Mission(Wed)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB8F1A2256CF76300AB2E2F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BDB8F1AA256CF7A500AB2E2F /* SearchFileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFileSystem.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 			children = (
 				BDB8F1A2256CF76300AB2E2F /* main.swift */,
 				BDB8F1AA256CF7A500AB2E2F /* SearchFileSystem.swift */,
+				BD04EC2E256DFDEF00B42BDB /* CSVFile.swift */,
+				BD04EC31256E03B200B42BDB /* MakeMultiThread.swift */,
 			);
 			path = "Week4-Mission(Wed)";
 			sourceTree = "<group>";
@@ -123,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDB8F1AB256CF7A500AB2E2F /* SearchFileSystem.swift in Sources */,
+				BD04EC32256E03B200B42BDB /* MakeMultiThread.swift in Sources */,
+				BD04EC2F256DFDEF00B42BDB /* CSVFile.swift in Sources */,
 				BDB8F1A3256CF76300AB2E2F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
