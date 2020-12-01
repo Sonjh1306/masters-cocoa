@@ -8,20 +8,21 @@
 import Foundation
 
 struct ArrayPractice2 {
-    func printArray2(array : [[Bool]],newChar : Character){
-        for i in 0...6 {
-            print(array[i].map{$0 == false  ? " ":"\(newChar)" })
-        }
-    }
-    func setBoolArray() -> [[Bool]] {
-        var array : [[Bool]] = Array(repeating: Array(repeating: true, count: 7), count: 7)
-        for i in 0...5 {
-            for j in 0...5-i{
-                array[j][i] = false
+    func setBoolArray(line: Int) -> [[Bool]]{
+        var boolArr: [[Bool]] = Array(repeating: Array(repeating: true, count: line), count: line)
+        for row in 0...line - 2 {
+            for column in 0...line - row - 2 {
+                boolArr[row][column] = false
             }
         }
-        return array
+        print(boolArr)
+        return boolArr
+    }
+    
+    func printArray(array: Array<Array<Bool>>, line: Int, newChar: Character){
+        
+        for i in 0...line - 1{
+            print(array[i].map{$0 == true  ? "\(newChar)" : " "})
+        }
     }
 }
-
-
