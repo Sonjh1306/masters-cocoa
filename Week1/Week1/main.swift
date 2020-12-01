@@ -15,6 +15,6 @@ var wed = Wednesday()
 //wed.printNumbers(lines: 5)
 //wed.printSquare(columns: 5)
 //wed.printReverse(lines: 4)
-wed.printDiamond(lines: 7)
+wed.printDiamond(max: 4)
 //_= wed.print3515(lines: 15)
 

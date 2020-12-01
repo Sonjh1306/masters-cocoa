@@ -105,30 +105,19 @@ struct Wednesday {
     }
     
     // 미션6. printDiamond()
-    func printDiamond(lines : Int){
-        for i in 0...lines - 1 {
-            if i % 2 == 0 {
-                for _ in 0...lines - i - 1 {
-                    print("",terminator:" ")
-                }
-                for _ in 0...i {
-                    print("*",terminator:" ")
-                }
-                print()
+    func printDiamond(max : Int){
+        let center : Int = (max + 1) / 2
+        
+        for i in 1...max {
+            if i <= center {
+                print(String(repeating: " ", count: max - i),String(repeating: "*", count: (i * 2) - 1),terminator: "")
+            }else{
+                print(String(repeating: " ", count: max - (max - i + 1)), String(repeating: "*", count: (max * 2) - (i * 2) + 1), terminator: " ")
             }
-        }
-        for j in 0..<lines / 2 {
-            if j % 2 == 0 {
-                for _ in 0...j {
-                    print("  ",terminator:" ")
-                }
-                for _ in 0...lines - j {
-                    print("*",terminator:" ")
-                }
-                print()
-            }
+            print()
         }
     }
+    
     
     // 미션7. print3515()
     func print3515(lines : Int)->Array<String>{
