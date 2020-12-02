@@ -5,94 +5,52 @@
 //  Created by sonjuhyeong on 2020/11/09.
 //
 
+// 조건1: 5글자 미만이거나 24글자 이상이면 실패
+// 조건2: 영문 대소문자, 숫자, -만 포함 가능하고 그 외에는 실패
+// 조건3: 같은 숫자가 연속해서 3회 이상 나오면 실패 111, 222
+// 조건4: 숫자가 연번으로 3개나오면 실패 123, 234
+// 위 조건을 모두 통과하면 성공
+
 import Foundation
 
-
-func IDValidator(ID : String) -> Bool {
-    var checkID = false
-    if ID.count >= 5 && ID.count < 24 {
-        <#code#>
-    }
-//    checkID = ID.count >= 5 && ID.count < 24
-//    checkID = validChar(ID: ID)
-//    checkID = validNumSeries(ID: ID)
-//    return checkID
-}
-
-//적절한 문자 - 아스키코드 범위를 통해 뽑음
-func validChar(ID : String) -> Bool {
-    var checkBool : Bool = true
-    let arr  = ID.utf16.map{ Int($0) }
-
-    for index in 0..<arr.count {
-        if((arr[index] != 45) && (arr[index] < 48 || (arr[index] > 57 && arr[index] < 65) || (arr[index] > 90 && arr[index] < 97) || (arr[index] > 122))){
-            checkBool = false
-            break // 쓸데없는 시간 줄임
+struct MakeIDValidator {
+    
+    func IDValidator(id: String) -> Bool {
+        if id.count < 5 || id.count >= 24 {
+            return false
+        }else if validChar(id: id) == false{
+            return false
+        }else if validNumSeries(id: id) == false{
+            return false
+        }else{
+            return true
         }
     }
-
-    return checkBool
-}
-
-// 연속된 숫자 판별
-func validNumSeries(ID: String) -> Bool {
-    var checkBool = true
-    let seriesNum = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "123", "234", "345", "456", "567", "678", "789", "890", "901", "012"]
-
-    for index in 0..<seriesNum.count {
-        if(ID.contains(seriesNum[index])){
-            checkBool = false
-            break
+    
+    func validChar(id : String) -> Bool {
+        var result: Bool = true
+        let idArr  = id.utf8.map{ Int($0) }
+ 
+        for index in 0..<idArr.count {
+            if (idArr[index] >= 0 && idArr[index] <= 44) || (idArr[index] >= 46 && idArr[index] <= 47) || (idArr[index] >= 58 && idArr[index] <= 64) || (idArr[index] >= 91 && idArr[index] <= 96) || idArr[index] >= 123{
+                result = false
+            }
         }
+        return result
     }
+    
+    func validNumSeries(id: String) -> Bool {
+        var result: Bool = true
+        let seriesNum = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "123", "234", "345", "456", "567", "678", "789", "890", "901", "012"]
+        
+        for index in 0..<seriesNum.count {
+            if(id.contains(seriesNum[index])){
+                result = false
+            }
+        }
+        return result
+    }
+    
 
-    return checkBool
 }
 
-
-
-//func IDValidator(ID:String) -> Bool {
-//    var checkID = true
-//    // ID 숫자 제한
-//    if(ID.count < 5 || ID.count > 24) {
-//        checkID = false
-//    }// ID 로 적절한 문자를 사용했는지 (대문자, 소문자, 숫자, -)
-//    if(!validChar(ID: ID)) {
-//        checkID = false
-//    }// 연속된 숫자 판별
-//    if(!validNumSeries(ID: ID)){
-//        checkID = false
-//    }
-//
-//    return checkID
-//}
-//
-////적절한 문자 - 아스키코드 범위를 통해 뽑음
-//func validChar(ID : String) -> Bool {
-//    var checkBool : Bool = true
-//    let arr  = ID.utf16.map{ Int($0) }
-//
-//    for index in 0..<arr.count {
-//        if((arr[index] != 45) && (arr[index] < 48 || (arr[index] > 57 && arr[index] < 65) || (arr[index] > 90 && arr[index] < 97) || (arr[index] > 122))){
-//            checkBool = false
-//            break // 쓸데없는 시간 줄임
-//        }
-//    }
-//
-//    return checkBool
-//}
-//
-//// 연속된 숫자 판별
-//func validNumSeries(ID: String) -> Bool {
-//    var checkBool = true
-//    let seriesNum = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "123", "234", "345", "456", "567", "678", "789", "890", "901", "012"]
-//
-//    for index in 0..<seriesNum.count {
-//        if(ID.contains(seriesNum[index])){
-//            checkBool = false
-//            break
-//        }
-//    }
-//
-//    return checkBool
-//}

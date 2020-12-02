@@ -19,7 +19,14 @@ import Foundation
 //var myArray3 = MagicSquare()
 //myArray3.makeMagicSquare(row: 3)
 
-// 미션 4
-var number11 = validResidentRegistrationNumber(number: "123456-1234567")
-print(number11)
+//// 미션 2
+//var makeIDValidator = MakeIDValidator()
+//print(makeIDValidator.IDValidator(id: "_yale135"))
+
+// 미션 3
+PasswordValidator(password: "asds123")
+
+//// 미션 4
+//var number11 = validResidentRegistrationNumber(number: "123456-1234567")
+//print(number11)
 
