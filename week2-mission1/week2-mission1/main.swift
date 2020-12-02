@@ -23,10 +23,12 @@ import Foundation
 //var makeIDValidator = MakeIDValidator()
 //print(makeIDValidator.IDValidator(id: "_yale135"))
 
-// 미션 3
-PasswordValidator(password: "asds123")
+//// 미션 3
+//PasswordValidator(password: "asds123")
 
 //// 미션 4
 //var number11 = validResidentRegistrationNumber(number: "123456-1234567")
 //print(number11)
 
+// 미션 6
+print(duplicatedWords(inputWords: ["가을", "너굴", "우주", "겨울", "봄봄", "여울"]))
