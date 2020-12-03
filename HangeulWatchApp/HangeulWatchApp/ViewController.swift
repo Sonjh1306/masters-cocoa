@@ -4,11 +4,17 @@
 //
 //  Created by sonjuhyeong on 2020/11/23.
 //
-import Foundation
+
 import UIKit
 
 class ViewController: UIViewController {
-        
+    @IBOutlet weak var yearNum: UILabel!
+    @IBOutlet weak var monthNum: UILabel!
+    @IBOutlet weak var dayNum: UILabel!
+    @IBOutlet weak var backGround: UIImageView!
+    
+    
+    
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
@@ -50,13 +56,37 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+//        background.image = UIImage(named: "background.jpg")
         updateUI()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(repeatSeond), userInfo: nil, repeats: true)
+    
+    //-----------------------------------------------------------------------------
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(repeatSecond), userInfo: nil, repeats: true)
     }
-    @objc func repeatSeond() {
+    @objc func repeatSecond() {
         updateUI()
+    }
+    //-----------------------------------------------------------------------------
+    func currentYear() -> String {
+        let formatter_hour = DateFormatter()
+        formatter_hour.dateFormat = "yyyy"
+        let current_hour_string = formatter_hour.string(from: Date())
+        return current_hour_string
     }
     
+    func currentMonth() -> String {
+        let formatter_hour = DateFormatter()
+        formatter_hour.dateFormat = "MM"
+        let current_hour_string = formatter_hour.string(from: Date())
+        return current_hour_string
+    }
+    
+    func currentDay() -> String {
+        let formatter_hour = DateFormatter()
+        formatter_hour.dateFormat = "dd"
+        let current_hour_string = formatter_hour.string(from: Date())
+        return current_hour_string
+    }
     func currentHour() -> String {
         let formatter_hour = DateFormatter()
         formatter_hour.dateFormat = "HH"
@@ -78,12 +108,27 @@ class ViewController: UIViewController {
     }
     
     func updateUI(){
-        var hour = Int(currentHour())!
-        var minute = Int(currentMinute())!
-        var second = Int(currentSecond())!
-        
+        let year = currentYear()
+        let month = currentMonth()
+        let day = currentDay()
+        let hour = Int(currentHour())!
+        let minute = Int(currentMinute())!
+        let second = Int(currentSecond())!
+        yearNum.text = year
+        monthNum.text = month
+        dayNum.text = day
         label1.textColor = UIColor.white
         label19.textColor = UIColor.white
+        if hour >= 6 && hour <= 17 {
+            backGround.image = UIImage(named: "daytime.jpg")
+            
+        }else if hour == 18 || hour == 5{
+            backGround.image = UIImage(named: "sunsetandsunrise.jpg")
+            
+        }else if (hour >= 19 && hour <= 24) || (hour >= 1 && hour <= 4) {
+            backGround.image = UIImage(named: "night.jpg")
+        }
+        
     
         // Label2
         if hour >= 1 && hour <= 11   {
@@ -92,7 +137,7 @@ class ViewController: UIViewController {
             label2.textColor = UIColor.gray
         }
         // Label3
-        if hour >= 12 || hour <= 23   {
+        if hour >= 12 && hour <= 23   {
             label3.textColor = UIColor.white
         }else{
             label3.textColor = UIColor.gray

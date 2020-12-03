@@ -13,6 +13,9 @@
 		BD86D008256B49B60050BAF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD86D006256B49B60050BAF3 /* Main.storyboard */; };
 		BD86D00A256B49B60050BAF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD86D009256B49B60050BAF3 /* Assets.xcassets */; };
 		BD86D00D256B49B60050BAF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD86D00B256B49B60050BAF3 /* LaunchScreen.storyboard */; };
+		BDEF156B2578D2FC00D16BD4 /* daytime.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDEF15682578D2FC00D16BD4 /* daytime.jpg */; };
+		BDEF156C2578D2FC00D16BD4 /* night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDEF15692578D2FC00D16BD4 /* night.jpg */; };
+		BDEF15712578E11200D16BD4 /* sunsetandsunrise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDEF15702578E11200D16BD4 /* sunsetandsunrise.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		BD86D009256B49B60050BAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD86D00C256B49B60050BAF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD86D00E256B49B70050BAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEF15682578D2FC00D16BD4 /* daytime.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = daytime.jpg; path = ../../../Desktop/daytime.jpg; sourceTree = "<group>"; };
+		BDEF15692578D2FC00D16BD4 /* night.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = night.jpg; path = ../../../Desktop/night.jpg; sourceTree = "<group>"; };
+		BDEF15702578E11200D16BD4 /* sunsetandsunrise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sunsetandsunrise.jpg; path = ../../../Desktop/sunsetandsunrise.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		BD86CFFF256B49B60050BAF3 /* HangeulWatchApp */ = {
 			isa = PBXGroup;
 			children = (
+				BDEF15682578D2FC00D16BD4 /* daytime.jpg */,
+				BDEF15692578D2FC00D16BD4 /* night.jpg */,
+				BDEF15702578E11200D16BD4 /* sunsetandsunrise.jpg */,
 				BD86D000256B49B60050BAF3 /* AppDelegate.swift */,
 				BD86D002256B49B60050BAF3 /* SceneDelegate.swift */,
 				BD86D004256B49B60050BAF3 /* ViewController.swift */,
@@ -127,6 +136,9 @@
 				BD86D00D256B49B60050BAF3 /* LaunchScreen.storyboard in Resources */,
 				BD86D00A256B49B60050BAF3 /* Assets.xcassets in Resources */,
 				BD86D008256B49B60050BAF3 /* Main.storyboard in Resources */,
+				BDEF15712578E11200D16BD4 /* sunsetandsunrise.jpg in Resources */,
+				BDEF156C2578D2FC00D16BD4 /* night.jpg in Resources */,
+				BDEF156B2578D2FC00D16BD4 /* daytime.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
